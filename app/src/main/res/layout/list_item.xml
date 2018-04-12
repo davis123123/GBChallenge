@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textItem"
+        android:layout_marginBottom="12dp"
+        android:orientation= "vertical">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Name"
+            android:textColor="#f96868"
+            android:autoSizeTextType="uniform" />
+        <TextView
+            android:id="@+id/tvCity"
+            android:text="City"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textColor="#f96868"
+            android:autoSizeTextType="uniform" />
+        <TextView
+            android:id="@+id/tvState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="State"
+            android:textColor="#f96868"
+            android:autoSizeTextType="uniform" />
+        <TextView
+            android:id="@+id/tvEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="EndDate"
+            android:textColor="#f96868"
+            android:autoSizeTextType="uniform"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgIcon"
+        android:scaleType="fitXY"
+        android:gravity="center_horizontal"
+        android:background="#E8E8E8" />
+</LinearLayout>

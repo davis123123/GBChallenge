@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //for getting data from guidebook server
     final String get_url = "https://guidebook.com/service/v2/";
 
     public interface Interface {
@@ -63,12 +62,11 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<UpcomingGuides> call, Response<UpcomingGuides> response) {
                 if(response.isSuccessful()) {
                     Log.i("STATE","Retrofit POST Success");
-                    //serverResponse = response.body().toString();
                     UpcomingGuides upcomingGuides = response.body();
+                    //push JSONArray to datalist
                     dataList = upcomingGuides.data;
                     Log.i("SERVER",upcomingGuides.total);
-                    //parseJS(serverResponse);
-                    mainAdapter = new MainAdapter(dataList, getApplicationContext());
+                    mainAdapter = new MainAdapter(dataList, getApplicationContext());//set entire adapter
                     recyclerView.setAdapter(mainAdapter);
                 }
                 else {

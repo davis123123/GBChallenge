@@ -40,7 +40,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainDataHolder
     public void onBindViewHolder(MainDataHolder holder, int position) {
         UpcomingGuides.Data data = (UpcomingGuides.Data) this.getItem(position);
         holder.tvName.setText(data.name);
-
         holder.tvCity.setText(data.venue.city);
         holder.tvState.setText(data.venue.state);
         holder.tvEndDate.setText(data.endDate);
@@ -74,11 +73,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainDataHolder
             Picasso.with(context)
                     .load(url)
                     .networkPolicy(NetworkPolicy.OFFLINE)
-                    .resize(450, 400)
+                    .resize(450, 400)//make images more visible since they were so small
                     .into(ivImage, new Callback() {
                         @Override
                         public void onSuccess() {
-
                         }
 
                         @Override
@@ -93,7 +91,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainDataHolder
 
                                         @Override
                                         public void onError() {
-                                            //ivImage.setVisibility(View.GONE);
                                             Log.e("Picasso","Could not get image");
                                         }
                                     });
